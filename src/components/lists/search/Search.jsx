@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../search/search.css";
+import AddUser from "../chatList/addUser/AddUser";
 const Search = () => {
   const [addMode, setAddMode] = useState(false);
 
@@ -15,6 +16,7 @@ const Search = () => {
         alt=""
         onClick={() => setAddMode((prev) => !prev)}
       />
+      {addMode && <AddUser />}
     </div>
   );
 };
